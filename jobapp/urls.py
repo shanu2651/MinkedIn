@@ -1,0 +1,28 @@
+from django.urls import path
+from .views import *
+urlpatterns=[
+    path('index/',index),
+    path('login/',log),
+    path('register/',regview),
+    path('navbar/',nav),
+    path('footer/',foot),
+    path('profile/',prof),
+    path('upvac/<int:id>',vacancy),
+    path('disvac/',viewvac),
+    path('editvac/<int:id>',jobupdate),
+    path('delevac/<int:id>',jobdele),
+    path('userreg',userreg.as_view(), name='userreg'),
+    path('userlogin',userlog.as_view(), name='userlogin'),
+    path('userprofile',userprof,name='userprofile'),
+    path('adduserprodet',adduserprodet.as_view(),name='adduserprodet'),
+    path('companydis/',companydis),
+    path('userviewvac/',userviewvac),
+    path('apply/<int:id>',applyclass),
+    path('wishlist/<int:id>',wishlist),
+    path('wishdis/',wishdis),
+    path('wishdele/<int:id>',wishdele),
+    path('viewusers/',viewappusers),
+    path('remuser/<int:id>',remuser),
+    path('seluser/<int:id>',select),
+    path('userdetails/',udetailview),
+    ]

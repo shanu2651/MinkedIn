@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body, html{
+     height: 100%;
+ 	background-repeat: no-repeat;
+ 	background-color: #d3d3d3;
+ 	background-image: url(http://wallpapercave.com/wp/19exAQ9.jpg);
+ 	font-family: 'Oxygen', sans-serif;
+background-attachment: fixed;
+}
+       .container{
+       height:500px;
+       width:400px;
+       background-color:greenyellow;
+       
+       }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>userregister</title>
+</head>
+<body>
+    <center>
+        <br>
+        <br>
+
+       <div class="container" >
+           <br>
+           <h1>Join Our Community</h1>
+           <br>
+            <form class="sign-up__form form" method="post">{% csrf_token %}
+        <div class="form__row form__row--two">
+            <div class="input form__inline-input">
+            <div class="input__container">
+              <input class="input__field" id="username" placeholder="user name" required="" type="text" name="username"/><label class="input__label" for="first-name" >User Name</label>
+            </div>
+          </div><br>
+          <div class="input form__inline-input">
+            <div class="input__container">
+              <input class="input__field" id="first-name" placeholder="First Name" required="" type="text" name="first_name"/><label class="input__label" for="first-name" >First Name</label>
+            </div>
+          </div><br>
+          <div class="input form__inline-input">
+            <div class="input__container">
+              <input class="input__field" id="last-name" placeholder="Last Name" required="" type="text"  name="last_name" /><label class="input__label" for="last-name">Last Name</label>
+            </div>
+          </div>
+        </div><br>
+        <div class="form__row">
+          <div class="input">
+            <div class="input__container">
+              <input class="input__field" id="email" placeholder="Email" required="" type="email" name="email" /><label class="input__label" for="email" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email</label>
+            </div>
+          </div>
+        </div><br>
+        <div class="form__row">
+          <div class="input">
+            <div class="input__container">
+              <input class="input__field" id="password" placeholder="Password" required="" type="password"  name="password"/><label class="input__label" for="password" >Password</label>
+            </div>
+          </div>
+        </div><br>
+        <div class="form__row">
+         <button type="submit" class="btn btn-dark" style="width:100px;height:30px;background-color:blue">Sign Up</button>
+        </div><br>
+        <div class="form__row sign-up__sign">
+          Already have an account? &nbsp;<a class="link" href="http://127.0.0.1:8000/jobapp/userlogin">Sign in.</a>
+        </div><br>
+        <div class="form__row sign-up__terms">
+          <a class="link" href="#">Term of use. Privacy policy</a>
+        </div>
+      </form>
+       </div>
+    </center>
+</body>
+</html>

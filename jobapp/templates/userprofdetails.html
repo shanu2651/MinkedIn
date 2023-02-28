@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1{
+            text-align: center;
+            padding-top: 20px;
+            /* background-color: rgb(245,243,243) */
+        }
+        .container{
+            margin-top: 50px;
+            text-align: center;
+        }
+        label .a{
+            width: 300px;
+            display: inline-block;
+            text-align: right;
+        }
+        .container .row #b{
+            width: 500px;
+            /* margin-left: 20px; */
+
+        }
+        button{
+            text-align: center;
+        }
+        .container form button{
+            border-radius: 5px;
+            padding: 5px;
+        }
+        /* .container form button:hover{ */
+            /* background-color: darksalmon; */
+        /* } */
+    </style>
+    <script src="https://kit.fontawesome.com/e0133b5663.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body background="https://images.freeimages.com/images/large-previews/5bc/light-wooden-surface-for-background-1641097.jpg">
+    <h1><center><strong>Add Details</strong></center></h1>
+    <div class="container">
+    <center>
+        <form method="post" enctype="multipart/form-data">{% csrf_token %}
+            <div class="row">
+                <div class="col-4">
+                    <label class="form-label"><strong class="a">Full Name</strong></label>
+                </div>
+                <div class="col-8" id="b">
+                    <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-solid fa-building"></i></span>
+                    <input type="text" class="form-control" name="fullname" placeholder="Full Name">
+                </div>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col-4">
+                    <label class="form-label"><strong class="a">Image</strong></label>
+                </div>
+                <div class="col-8" id="b">
+                    <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-solid fa-building"></i></span>
+                    <input type="file" class="form-control" name="image" placeholder="image">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <label class="form-label"><strong class="a">Email</strong></label>
+                </div>
+                <div class="col-8" id="b">
+                    <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="email" class="form-control" name="email" placeholder="Enter your email">
+                </div>
+            </div>
+        </div>
+                <div class="row">
+                <div class="col-4">
+                    <label class="form-label"><strong class="a">Resume</strong></label>
+                </div>
+                <div class="col-8" id="b">
+                    <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-solid fa-building"></i></span>
+                    <input type="file" class="form-control" name="resume" placeholder="Upload Resume">
+                </div>
+            </div>
+        <div class="row">
+            <div class="col-4">
+                <label class="form-label"><strong class="a">Education Qualification</strong></label>
+            </div>
+            <div class="col-8" id="b">
+                <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fa-solid fa-user-graduate"></i></span>
+                <input type="text" class="form-control" name="eduquali" placeholder="Education Qualification">
+            </div>
+        </div>
+           <div class="row">
+            <div class="col-4">
+                <label class="form-label"><strong class="a">Experience </strong></label>
+            </div>
+            <div class="col-8" id="b">
+                <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fa-solid fa-user-graduate"></i></span>
+                <input type="text" class="form-control" name="experience" placeholder="experience">
+                </div>
+            </div>
+           </div>
+
+                 <div class="row">
+                      <div class="col-4">
+                         <label class="form-label"><strong class="a">Address</strong></label>
+                      </div>
+            <div class="col-8" id="b">
+                <div class="input-group mb-3">
+                <span class="input-group-text"><i class="fa-solid fa-user-graduate"></i></span>
+                <input type="text" class="form-control" name="address" placeholder="address">
+                </div>
+            </div>
+                 </div>
+
+                <div class="row">
+                <div class="col-4">
+                    <label class="form-label"><strong class="a">Phone</strong></label>
+                </div>
+                <div class="col-8" id="b">
+                    <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa-solid fa-building"></i></span>
+                    <input type="number" class="form-control" name="phone" placeholder="Phone Number">
+                    </div>
+                </div>
+               </div>
+            <br>
+         <center>
+         <button type="submit" class="btn btn-dark text-white" style="width:200px;">Update Prof<i class="fa-solid fa-paper-plane"></i></button>
+        </center>
+        </form>
+    </center>
+    </div>
+</body>
+</html>

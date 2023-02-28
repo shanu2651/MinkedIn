@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post" enctype="multipart/form-data">{% csrf_token %}
+
+    <input type="text" placeholder="comapny name" name="cname" value="{{cn}}" readonly>  <br><br>
+
+    <input type="text" placeholder="jobtitle" name="jobtitle" value="{{jb}}" readonly> <br><br>
+
+<input type="text" placeholder="full mane" name="fname" value="" ><br><br>
+
+<input type="email" placeholder="Email" name="email"><br><br>
+
+<input type="file" placeholder="Resume" name="resume"><br><br>
+
+    <input type="submit" value="apply">
+
+</form>
+
+</body>
+</html>
